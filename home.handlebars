@@ -1,0 +1,87 @@
+<html>
+    <head>
+  <script language="javascript" type="text/javascript">
+    function callTL(listindex)
+    {  
+   switch (listindex)
+        {
+        case "1" :
+            
+            document.getElementById("Tl").options[1]=new Option("OP","open");
+        
+            break;
+        case "2" :
+          
+            document.getElementById("Tl").options[1]=new Option("OPEN","open");
+          
+        }
+        
+    }
+
+
+
+   function callstaff(listindex)
+    {  
+
+   switch (listindex)
+        {
+        case "1" :
+                  document.getElementById("Tl").options[1]=new Option("OP","open");
+        
+            break;
+        case "2" :
+          
+            document.getElementById("Tl").options[1]=new Option("OPEN","open");
+          
+        }
+       
+    }
+
+
+
+
+
+
+
+    </script>
+    </head>
+<body>
+
+
+
+
+
+  <div class="ab" id="ab">Manager
+        <select id="Manager" name="Manager" onchange="javascript: callTl(this.options[this.selectedIndex].value)">
+        <option value="">Select Manager</option>
+
+{{#each ab.[1]}}
+ <option value="{{this.Tl}}">{{this.agent_name}}</option>
+      
+  {{/each}}
+       <p>jlvdvlm</p>
+
+ </select>
+    </div>
+
+
+
+
+        <div class="ab" id="ab">TL:
+        <script type="text/javascript" language="JavaScript">
+        document.write('<select name="Tl" id="Tl"  onchange="javascript: callstaff(this.options[this.selectedIndex].value)><option value="">Select TL</option></select>')
+        </script>
+
+
+        <div class="ab" id="ab">Staff
+        <script type="text/javascript" language="JavaScript">
+        document.write('<select name="staff" id="staff"  onchange="javascript: callcustomer(this.options[this.selectedIndex].value)><option value="">Select customer</option></select>')
+        </script>
+
+
+</body>
+</html>
+
+
+
+
